@@ -7,3 +7,8 @@ let info = {
   };
 
 console.log(Object.values(info));
+
+//outra forma
+for(let properties in info){
+  console.log(info[properties]);
+}

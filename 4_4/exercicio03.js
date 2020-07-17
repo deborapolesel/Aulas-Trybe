@@ -6,6 +6,6 @@ let info = {
     nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
   };
 
-for (let chaves in info) {
-    console.log(chaves);
+for (let propriedades in info) {
+    console.log(propriedades);
 }
