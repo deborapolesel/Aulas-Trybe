@@ -77,7 +77,9 @@
           // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
             function mostrarConsole(){
             let paragrafos = document.getElementsByTagName('p');
-            console.log(paragrafos);
+            for (let i=0;i<paragrafos.length;i++) {
+              console.log(paragrafos[i]);
+            }
           }
           mostrarConsole();
 
