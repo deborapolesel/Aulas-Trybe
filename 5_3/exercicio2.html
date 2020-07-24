@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+
+  <script>
+    //declaration:
+    const solutionDiv = document.getElementById("solution");
+    let squareValue = document.getElementById("square-input").value;
+    const buttonSquare = document.getElementById("square-button");
+
+    buttonSquare.addEventListener("click", function(){
+        let squareValue = document.getElementById("square-input").value;
+        solutionDiv.innerHTML = `The solution is ${squareValue*squareValue}`;
+    })
+
+    const buttonHalf = document.getElementById("half-button");
+
+    buttonHalf.addEventListener("click", function(){
+        let halfValue = document.getElementById("half-input").value;
+        solutionDiv.innerHTML = `The solution is ${halfValue/2}`;
+    })
+
+    const buttonPercent = document.getElementById("percent-button");
+
+    buttonPercent.addEventListener("click", function(){
+        let firstNumber = document.getElementById("percent1-input").value;
+        let secondNumber = document.getElementById("percent2-input").value;
+        let percent = firstNumber/secondNumber * 100;
+        solutionDiv.innerHTML = `The first number is ${percent}% of second number`;
+    })
+
+    const buttonArea = document.getElementById("area-button");
+
+    buttonArea.addEventListener("click", function(){
+        let numberArea = document.getElementById("area-input").value;
+        var area = Math.PI * (numberArea*numberArea);
+        solutionDiv.innerHTML = `The area is ${area}`;
+    })
+
+
+  </script>
+  
+</body>
+</html>
